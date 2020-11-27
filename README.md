@@ -55,3 +55,15 @@ Y para ejecutar el proyecto en un servidor embebido se lanza el siguiente comand
 mvn spring-boot:run
 ```
 
+### 4. Estructura del proyecto
+El proyecto se ha estructurado y configurado mediante la siguiente división:
+- **Domain**: Interface _Operation_ y las corresondientes implementaciones por cada operación aritmética.
+- **Service**: Interface _OperationService_ y las correspondientes implementaciones con la lógica de negocio.
+- **Controller**: Interface e implementación de una API REST.
+- **Config**: Incorpora la configuración de Swagger UI.
+- **Exception**: Gestión personalizada de las excepciones producidas en las llamadas REST.
+- **Util**: Interface e implementación para incorporar la dependencia de la librería _Tracer_.
+
+Y por último, en la carpeta _test_ se han creado los diferentes tests para desarrollar el proyecto mediante la metodología TDD (_Test Driven Development_). Concretamente, se ha utilizado JUnit 5 y Mockito para generar los tests unitarios.
+
+
