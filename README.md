@@ -67,3 +67,26 @@ El proyecto se ha estructurado y configurado mediante la siguiente división:
 Y por último, en la carpeta _test_ se han creado los diferentes tests para desarrollar el proyecto mediante la metodología TDD (_Test Driven Development_). Concretamente, se ha utilizado JUnit 5 y Mockito para generar los tests unitarios.
 
 
+### 5. API REST
+Para comunicarse con el microservicio se ha creado una API REST básica con la cuál es posible utilizar la funcionalidad de suma y resta. Ejemplos:
+* http://localhost:8080/api/v1/calculator/addition/55/56.89
+* http://localhost:8080/api/v1/calculator/subtract/55/56.89
+
+Las peticiones HTTP solo soportan las operaciones de suma y resta con dos números de tipo: Integer, Float y/o Double. Se puede mejorar fácilmente esta API añadiendo nuevas operaciones junto con la lógica de negocio, dominio y tests correspondientes.
+
+### 6. Metodología de trabajo
+Para cubrir el trabajo de desarrollo se ha intentado seguir al máximo las premisas de **_Clean Code_**, como son:
+* Atributos, clases y métodos escritos con nombres significativos.
+* Clases descritas por nombres y métodos por verbos.
+* Métodos y clases lo más pequeños posibles.
+* Aunque es un POC, se ha añadido manejo de excepciones personalizadas en la parte de la API REST.
+* Código desacoplado en capas y organizado por funcionalidad.
+* Uso de interfaces.
+* Empleo de metodología TDD (Test Driven Development) para crear tests unitarios, dirigiendo la implementación de las distintas funcionalidades.
+
+### 7. Crear tests manuales mediante Swagger UI.
+Se ha añadido la dependencia de Swagger UI para facilitar la tarea de poder probar manualmente los servicios publicados.
+
+La URL en local es:
+http://localhost:8080/swagger-ui.html#
+
