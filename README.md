@@ -43,3 +43,15 @@ Pasos seguidos para instalar la librería *_tracer_*:
 ```
 
 Por último, al actualizar el proyecto Maven se observa como la librería está incluida en las dependencias del proyecto.
+
+### 3. Compilar y ejecutar el proyecto
+Para compilar el código e importar las dependencias se lanza el siguiente comando desde la ruta donde se encuentra el fichero _pom.xml_:
+```
+mvn clean install
+```
+
+Y para ejecutar el proyecto en un servidor embebido se lanza el siguiente comando también desde la ruta donde se encuentra el fichero _pom.xml_:
+```
+mvn spring-boot:run
+```
+
