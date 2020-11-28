@@ -2,7 +2,7 @@
 
 ### 1. Introducción
 En este proyecto se desarrolla una calculadora con operaciones básicas de suma y resta, utilizando como puerta de entrada una API REST.
-Para llevar a cabo el desarrollo del microservicio se han utilizado las siguiente tecnologías software:
+Para llevar a cabo el desarrollo del microservicio se han utilizado las siguientes tecnologías software:
 - Java 8
 - Spring Boot 2.2.11
 - Maven 3.6.3
@@ -24,7 +24,6 @@ Se han integrado las siguientes dependencias a través de Maven:
 - Spring-boot-starter-web
 - Lombok
 - Swagger-UI
-- Apache commons lang3
 
 Además se ha incorporado la librería externa *_tracer_*, cuyos ficheros _.jar_ han sido proporcionados inicialmente. Con esta librería se ha mostrado la traza de ciertas operaciones.
 
@@ -72,7 +71,9 @@ Para comunicarse con el microservicio se ha creado una API REST básica con la c
 * http://localhost:8080/api/v1/calculator/addition/55/56.89
 * http://localhost:8080/api/v1/calculator/subtract/55/56.89
 
-Las peticiones HTTP solo soportan las operaciones de suma y resta con dos números de tipo: Integer, Float y/o Double. Se puede mejorar fácilmente esta API añadiendo nuevas operaciones junto con la lógica de negocio, dominio y tests correspondientes.
+Las peticiones HTTP solo soportan las operaciones de suma y resta con dos números. Se puede mejorar fácilmente esta API añadiendo nuevas operaciones junto con la lógica de negocio, dominio y tests correspondientes.
+
+Además se ha añadido un manejo de excepciones con mensajes personalizados, para algunos casos en los que la API REST recibe métodos HTTP o parámetros incorrectos, por ejemplo.
 
 ### 6. Metodología de trabajo
 Para cubrir el trabajo de desarrollo se ha intentado seguir al máximo las premisas de **_Clean Code_**, como son:

@@ -6,6 +6,8 @@ import com.technicaltest.calculator.util.TracerLogger;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.math.BigDecimal;
+
 @RestController
 public class DefaultCalculatorController implements CalculatorController {
 
@@ -19,14 +21,14 @@ public class DefaultCalculatorController implements CalculatorController {
         this.log = log;
     }
 
-    public ResponseEntity<Number> addNumbers(String number1, String number2) {
-        Number number = additionOperationService.calculateResult(number1, number2);
+    public ResponseEntity<BigDecimal> addNumbers(BigDecimal number1, BigDecimal number2) {
+        BigDecimal number = additionOperationService.calculateResult(number1, number2);
         log.trace("Result for addNumbers(" + number1 + ", " + number2 + ") => " + number);
         return ResponseEntity.ok(number);
     }
 
-    public ResponseEntity<Number> subtractNumbers(String number1, String number2) {
-        Number number = subtractOperationService.calculateResult(number1, number2);
+    public ResponseEntity<BigDecimal> subtractNumbers(BigDecimal number1, BigDecimal number2) {
+        BigDecimal number = subtractOperationService.calculateResult(number1, number2);
         log.trace("Result for subtractNumbers(" + number1 + ", " + number2 + ") => " + number);
         return ResponseEntity.ok(number);
     }
