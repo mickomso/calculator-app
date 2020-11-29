@@ -73,7 +73,9 @@ Para comunicarse con el microservicio se ha creado una API REST básica con la c
 
 Las peticiones HTTP solo soportan las operaciones de suma y resta con dos números. Se puede mejorar fácilmente esta API añadiendo nuevas operaciones junto con la lógica de negocio, dominio y tests correspondientes.
 
-Además se ha añadido un manejo de excepciones con mensajes personalizados, para algunos casos en los que la API REST recibe métodos HTTP o parámetros incorrectos, por ejemplo.
+Además se ha añadido un manejo de excepciones con mensajes personalizados, para algunos casos en los que la API REST recibe peticiones o parámetros incorrectos. 
+
+Esto se ha realizado mediante una clase _Handler_ que extiende de _ResponseEntityExceptionHandler_, acompañada de la anotación _@ControllerAdvice_. Dicha anotación nos permite manejar las excepciones de la aplicación en un único componente.
 
 ### 6. Metodología de trabajo
 Para cubrir el trabajo de desarrollo se ha intentado seguir al máximo las premisas de **_Clean Code_**, como son:
